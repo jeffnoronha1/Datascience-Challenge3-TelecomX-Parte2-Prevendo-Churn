@@ -27,6 +27,27 @@ Este projeto utiliza modelos preditivos para identificar clientes com maior prob
 
 ---
 
+## 🔗 Matriz de Correlação
+
+A matriz de correlação permite identificar quais variáveis numéricas têm maior relação com o churn. No projeto, foi gerado o seguinte gráfico:
+
+![Matriz de Correlação das Variáveis Numéricas](./figures/matriz_correlacao_heatmap.png)
+
+### Principais Insights da Correlação
+
+- **Tempo de Contrato (`tenure`)**  
+  - Correlação negativa forte com churn (`-0.35`): quanto maior o tempo de permanência, menor a chance de evasão.
+- **Cobrança Mensal (`Charges.Monthly`)**  
+  - Correlação positiva moderada (`0.19`): clientes com cobranças mensais mais altas tendem a cancelar mais.
+- **Gasto Total (`Charges.Total`)**  
+  - Correlação negativa moderada (`-0.20`): clientes que já gastaram mais têm menor propensão a churn.
+- **Idade (`SeniorCitizen`)**  
+  - Correlação positiva leve (`0.15`): clientes idosos têm uma leve tendência a cancelar mais.
+
+Esses resultados reforçam que **tempo de relacionamento** e **valor total gasto** são fatores de proteção, enquanto **preço mensal alto** e **perfil de cliente idoso** aumentam o risco de churn.
+
+---
+
 ### 1. Fatores de Risco (Aumentam o churn)
 - **Contrato Mensal (Month-to-month):** Maior risco de evasão devido à flexibilidade.
 - **Fibra Óptica (InternetService_Fiber optic):** Clientes desse serviço estão mais propensos a cancelar, possivelmente por preço ou instabilidade.
